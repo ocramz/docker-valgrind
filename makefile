@@ -1,5 +1,5 @@
 ACCOUNT = ""
-PROJECT = "docker-valgrind"
+PROJECT = docker-valgrind
 
 .DEFAULT_GOAL := help
 
@@ -22,4 +22,4 @@ push: image login
 	docker push $(ACCOUNT)/$(PROJECT)
 
 run:
-	docker run --rm -it $(ACCOUNT)/$(PROJECT)
+	docker run -it --rm $(ACCOUNT)/$(PROJECT)
