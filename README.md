@@ -1,5 +1,7 @@
 # docker-valgrind
 
+Travis CI: [![Build Status](https://travis-ci.org/ocramz/docker-valgrind.svg?branch=master)](https://travis-ci.org/ocramz/docker-valgrind)
+
 ## Usage
 
 Assuming your project `Makefile` has a `grind` target which runs [valgrind](http://valgrind.org/) on it.
