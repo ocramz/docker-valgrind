@@ -18,7 +18,7 @@ build:
 login:
 	docker login -u $(ACCOUNT)
 
-push: image login
+push: build login
 	docker push $(ACCOUNT)/$(PROJECT)
 
 run:
