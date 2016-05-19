@@ -10,6 +10,7 @@ help:
 	@echo "  build    to build the docker image"
 	@echo "  login    to login to your docker account"
 	@echo "  push     to push the image to the docker registry"
+	@echo "  run      to run the image"
 
 build:
 	docker build -t $(ACCOUNT)/$(PROJECT) .
@@ -19,3 +20,6 @@ login:
 
 push: image login
 	docker push $(ACCOUNT)/$(PROJECT)
+
+run:
+	docker run --rm -it $(ACCOUNT)/$(PROJECT)
