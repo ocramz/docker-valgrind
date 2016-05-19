@@ -10,8 +10,9 @@ RUN apt-get install -y make sudo wget curl build-essential
 # # valgrind
 RUN sudo apt-get install -y valgrind 
 
-ENTRYPOINT [ "/usr/bin/make" ]
-CMD [ "--help" ]
+# # show `make` help upon entry
+# ENTRYPOINT [ "/usr/bin/make" ]
+# CMD [ "--help" ]
 
 # # triggers for derived containers
 # onbuild add . /src
