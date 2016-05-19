@@ -8,7 +8,7 @@ RUN apt-get install -y make sudo wget curl build-essential
 
 
 # # valgrind
-RUN sudo apt-get install valgrind 
+RUN sudo apt-get install -y valgrind 
 
 ENTRYPOINT [ "/usr/bin/make" ]
 CMD [ "--help" ]
