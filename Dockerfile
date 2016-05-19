@@ -1,15 +1,14 @@
-from ubuntu:12.10
+FROM ubuntu:14.04
 
-maintainer Thorsten Lorenz <thlorenz@gmx.de>
+MAINTAINER Marco Zocca, zocca.marco gmail
 
-run apt-get update
-run apt-get upgrade -y
+RUN apt-get update && apt-get upgrade -y
 
-run apt-get install -y build-essential
-run apt-get install -y valgrind 
+RUN apt-get install -y build-essential && valgrind 
 
-entrypoint [ "/usr/bin/make" ]
-cmd [ "--help" ]
+ENTRYPOINT [ "/usr/bin/make" ]
+CMD [ "--help" ]
 
-onbuild add . /src
-onbuild workdir /src
+# # triggers for derived containers
+# onbuild add . /src
+# onbuild workdir /src
